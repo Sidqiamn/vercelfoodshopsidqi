@@ -13,7 +13,7 @@ const ItemMenu = (props) => {
     const {cartItems, addToCart, removeFromCart} = useContext(StoreContext)
 
   return (
-    <div className='w-52 mt-7-center gap-4 xsm:w-40 xsm:flex-1 xsm:basis-40'>
+    <div className='w-52 mt-7-center gap-4 xsm:w-40 xsm:flex-1 xsm:basis-40' id='itemmenu'>
         <div>
             <div className='relative'>
                 <img src={image} className="" alt="" />

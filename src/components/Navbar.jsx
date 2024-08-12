@@ -20,9 +20,9 @@ const Navbar = () => {
         </div>
         <div className='flex gap-10 mr-10 xsm:hidden'>
            <Link to={'/'}><p>home</p> </Link> 
-            <p>menu</p>
-            <p>mobile app</p>
-            <p>contact us</p>
+            <a href="#itemmenu">menu</a>
+            <a href="#mobile">mobile app</a>
+            <a href="#contact">contact us</a>
         </div>
         <div id='right' className='flex gap-12 items-center '>
             <img src={search} alt="" className='w-8 h-8 xsm:w-6 xsm:h-6'/>
@@ -36,7 +36,7 @@ const Navbar = () => {
             </Link>  
             <p className=' rounded-xl px-5 py-2 xsm:px-3 xsm:py-1 transition-all duration-500 border cursor-pointer hover:bg-orange-500 hover:text-white border-zinc-800'>Sign in</p>
         </div>
-        <div className='fixed bottom-10 right-5 bg-orange-500 rounded-full p-2 hover:bg-orange-700 transition-all duration-300'>
+        <div className='fixed bottom-10 right-5 z-50 bg-orange-500 rounded-full p-2 hover:bg-orange-700 transition-all duration-300'>
           <a href="#kembali"><img className='h-16' src={arrow} alt="" /></a>
         </div>
     </div>

@@ -4,7 +4,7 @@ import foodHead from '../../src/assets/foodJs.jpg'
 
 const Header = () => {
   return (
-    <div className='mt-10 relative'>
+    <div className='mt-10 relative' id='heder'>
         <img className="h-[30rem] w-full object-cover" src={foodHead} alt="" />
         <div className='absolute  w-3/4 left-28 bottom-10 flex flex-col gap-y-10 xsm:w-10/12 xsm:left-5'>
             <div>

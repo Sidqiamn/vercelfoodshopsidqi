@@ -6,7 +6,7 @@ import gmail from '../../src/assets/gmail_icon.png'
 
 const Footer = () => {
   return (
-    <div className='bg-gradient-to-br from-slate-700 via-orange-900 to-black relative mt-20 bottom-0 flex xsm:flex-col left-0'>
+    <div id='contact' className='bg-gradient-to-br from-slate-700 via-orange-900 to-black relative mt-20 bottom-0 flex xsm:flex-col left-0'>
         <div className='w-1/2 xsm:w-full px-20 py-20 xsm:px-10 xsm:py-10'>
             <p className='text-orange-600 text-3xl overflow-hidden font-bold'>Sidqi.com</p>
             <p className='text-white mt-4 mb-4'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime facere nam eius optio at neque adipisci, omnis beatae asperiores voluptate consectetur quos, sit iste libero id voluptatibus aliquid? Blanditiis, nobis?</p>
