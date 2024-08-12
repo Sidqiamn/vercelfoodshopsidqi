@@ -4,7 +4,7 @@ import search from '../../src/assets/search_icon.png'
 import basket from '../../src/assets/basket_icon.png'
 import { StoreContext } from '../Context/StoreContext'
 import { Link } from 'react-router-dom'
-
+import arrow from '../../src/assets/arrow.png'
 
 const Navbar = () => {
 
@@ -14,9 +14,9 @@ const Navbar = () => {
   const total = Object.values(cartItems).reduce((acc, item) => acc + item, 0);
   console.log(total)
   return (
-    <div className='flex justify-between items-center'>
-        <div id='left'>
-            <p className='text-orange-500 font-bold text-4xl xsm:text-2xl'>foodQi</p>
+    <div className='flex justify-between items-center border-b-4 border-opacity-50 pb-5' id='kembali'>
+        <div id='left ' className='overflow-hidden'>
+          <Link to="/" className='text-orange-500 font-bold text-4xl xsm:text-2xl overflow-hidden'>foodQi</Link>
         </div>
         <div className='flex gap-10 mr-10 xsm:hidden'>
            <Link to={'/'}><p>home</p> </Link> 
@@ -34,7 +34,10 @@ const Navbar = () => {
         
                </div>
             </Link>  
-            <p className=' rounded-xl px-5 py-2 xsm:px-3 xsm:py-1 border border-zinc-800'>Sign in</p>
+            <p className=' rounded-xl px-5 py-2 xsm:px-3 xsm:py-1 transition-all duration-500 border cursor-pointer hover:bg-orange-500 hover:text-white border-zinc-800'>Sign in</p>
+        </div>
+        <div className='fixed bottom-10 right-5 bg-orange-500 rounded-full p-2 hover:bg-orange-700 transition-all duration-300'>
+          <a href="#kembali"><img className='h-16' src={arrow} alt="" /></a>
         </div>
     </div>
   )
