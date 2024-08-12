@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import logo from '../../src/assets/logo.png'
 import search from '../../src/assets/search_icon.png'
 import basket from '../../src/assets/basket_icon.png'
@@ -8,9 +8,11 @@ import { Link } from 'react-router-dom'
 
 const Navbar = () => {
 
-  // const {totalvalues} =useContext(StoreContext)
-  const {total, totalvalues} = useContext(StoreContext)
-  console.log('totalValue',total)
+
+  const {cartItems} = useContext(StoreContext)
+
+  const total = Object.values(cartItems).reduce((acc, item) => acc + item, 0);
+  console.log(total)
   return (
     <div className='flex justify-between items-center'>
         <div id='left'>
@@ -25,10 +27,11 @@ const Navbar = () => {
         <div id='right' className='flex gap-12 items-center '>
             <img src={search} alt="" className='w-8 h-8 xsm:w-6 xsm:h-6'/>
             <Link to={'/cart'}>
-              <div className='relative cursor-pointer' >
+              <div className='relative cursor-pointer flex' >
 
                   <img src={basket} alt="" className='w-8 h-8 xsm:w-6 xsm:h-6'/>
-                  <span className='absolute  -right-5 text-white -top-1 bg-red-500 px-1 text-xs rounded-full '>{total} </span> 
+                  <span className='  -right-5 text-white -top-1 bg-red-500 px-1 h-fit text-xs rounded-full '>{total} </span>
+        
                </div>
             </Link>  
             <p className=' rounded-xl px-5 py-2 xsm:px-3 xsm:py-1 border border-zinc-800'>Sign in</p>
